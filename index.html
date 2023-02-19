@@ -12,14 +12,56 @@
         <div class="wrapper">
             <div class="container">
                 <div class="sub-container">
+                    <!-- set budget box-->
                     <div class="total-amount-container">
                         <h3> Budget </h3>
+                        <!--budget input-->
+                        <input type="number" id="budget" placeholder="Enter Total Amount"> 
+                        <button class="submit" id="budget-button" >Set Budget</button>
+
                     </div>
+                    <!-- expenese box -->
+                    <div class="user-amount-container">
+                        <h3>Expenses</h3>
+                        <!--Drop down list-->
+                        <select name="category" id="category">
+                            <option value="" hidden selected>Select a Category</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Bills">Bills</option>
+                            <option value="Gas">Gas</option>
+                            <option value="Entertaiment">Entertaiment</option>
+                            <option value="Dining">Dining</option>
+                        <!--Cost input-->
+                        <input type="number" id="expenses-amount" placeholder="Enter Cost of Product">
+                        <button class="submit" id="expenses-button">Check Amount</button>
+                    </div>
+                    
                 </div>
+                <div class="output-container flex-space" >
+                    <div>
+                        <p>Total Budget</p>
+                        <span id="amount">0</span>
+                    </div>
+                    <div>
+                        <p>Expenses</p>
+                        <span id="expend-vlaue">0</span>
+                    </div><div>
+                        <p>Blance</p>
+                        <span id="balnce-amount">0</span>
+                    </div>
+            <!-- Output -->
             
             </div>
+        </div>
+        <!-- List -->
+        <div class="list">
+            <h3> Expense List</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+
         </div> 
     
-
+        <script src="script.js"></script>
     </body>
 </html>

@@ -7,3 +7,102 @@ font-family: "Poppins" ,sans-serif;
 body{
     background-color: #ADDFFF;
 }
+.wrapper{
+    width: 90%;
+    font-size: 16px;
+    max-width: 43.75em;
+    margin: 1em auto;
+}
+.container{
+width: 100%;
+}
+.sub-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 3em;
+}
+.flex { 
+    display: flex;
+    align-items: center;
+}
+.flex-space{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper h3 { 
+    color: black;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+}
+.container select{
+    display: block;
+    width: 100%;
+    padding: 0.6em 0.3em;
+    font-weight: 300;
+    outline: none;
+    border: 1px solid #ADDFFF;
+    border-radius: 5px;
+    color: black;
+}
+.container input{
+    display: block;
+    width: 100%;
+    padding: 0.6em 0.3em;
+    border: 1px ;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #ADDFFF;
+    border-radius: 5px;
+    color: black;
+}
+.sub-container button{
+    background-color:#6698FF ;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 1em;
+    padding: 0.6em 1.2em ;
+    cursor: pointer;
+}
+.total-amount-container,.user-amount-container{
+    background-color: #FFFFFF;
+    padding: 1.25em 0.9em;
+    border-radius: 0.3em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.output-container{
+    background-color: #6698FF;
+    border-radius: 0.3em;
+    color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 0.3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-weight: 500;
+}
+.output-container p {
+    font-weight: 500 ;
+    margin-bottom: 0.6em;
+}
+.output-container span{
+    display: block;
+    text-align: center;
+    font-weight: 400;
+}
+.list{
+    background-color: white;
+    padding: 2em 1.2em ;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 0.6em;
+}
+.hide{ 
+    display: none;
+}
+/* .error{ 
+
+} */
