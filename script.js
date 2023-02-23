@@ -8,12 +8,25 @@ const amount = document.getElementById("amount");
 const expensesbutton = document.getElementById("expenses-button");
 const budgetbutton = document.getElementById("budget-button");
 const expendvlaue = document.getElementById("expend-vlaue");
+const expenseList = document.getElementById("list");
 // Get the data from local storage 
-const storedExpenses = localStorage.getItem('expenses');
-if (storedExpenses != null) {
-  expenses = JSON.parse(storedExpenses);
-  expenseList.appendChild(expenses);
-}
+const storedExpenses = JSON.parse(localStorage.getItem('expenses'));
+
+if (storedExpenses){ 
+    console.log(storedExpenses)
+    const expenseList = document.getElementById("list");
+    for (let i = 0; i < storedExpenses.length; i++) {
+        console.log(i)
+        const expense = storedExpenses[i];
+        console.log(expense)
+        const newExpenseItem = document.createElement("li");
+        newExpenseItem.textContent = (`${expense.category}:  $${expense.amount}`);
+        expenseList.appendChild(newExpenseItem);
+    }}
+
+    
+    //Add expense item to list 
+    
 
 
 // The function of adding budget
