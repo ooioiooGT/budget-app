@@ -1,7 +1,7 @@
 let tempamount = 0;
+let tempexpenses = 0 
 let datas = [];
 
-const budget = document.getElementById("budget");
 const category = document.getElementById("category");
 const expensesamount = document.getElementById("expenses-amount");
 const amount = document.getElementById("amount");
@@ -12,14 +12,16 @@ const expenseList = document.getElementById("list");
 // Get the data from local storage 
 const storedExpenses = JSON.parse(localStorage.getItem('expenses'));
 
+
+
 if (storedExpenses){ 
     console.log(storedExpenses)
     const expenseList = document.getElementById("list");
     for (let i = 0; i < storedExpenses.length; i++) {
         console.log(i)
-        const expense = storedExpenses[i];
+        let expense = storedExpenses[i];
         console.log(expense)
-        const newExpenseItem = document.createElement("li");
+        let newExpenseItem = document.createElement("li");
         newExpenseItem.textContent = (`${expense.category}:  $${expense.amount}`);
         expenseList.appendChild(newExpenseItem);
     }}
@@ -33,7 +35,7 @@ if (storedExpenses){
 
 budgetbutton.addEventListener("click", function(e) {
     tempamount = budget.value
-    amount.innerHTML = tempamount; 
+    amount.innerHTML = `${tempamount} $`; 
     budget.value = "";
 
 })
@@ -41,8 +43,8 @@ budgetbutton.addEventListener("click", function(e) {
 // The function of adding expenses 
 expensesbutton.addEventListener("click", function(e){
     
-    const expenseList = document.getElementById("list");
-    const newExpenseItem = document.createElement("li");
+    let expenseList = document.getElementById("list");
+    let newExpenseItem = document.createElement("li");
     
 
     
@@ -55,6 +57,14 @@ expensesbutton.addEventListener("click", function(e){
         category: category.value,
         amount: expensesamount.value
     };
+    // caculating the expenses 
+    console.log(expendvlaue)
+    console.log(expensesamount.value)
+    tempexpenses = (tempexpenses + (parseFloat(expensesamount.value)));
+
+    console.log(tempexpenses)
+    expendvlaue.innerHTML = `${tempexpenses} $ `;
+
     // console.log(data)
     datas.push(data);
     localStorage.setItem('expenses', JSON.stringify(datas));

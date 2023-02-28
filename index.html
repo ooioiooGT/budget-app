@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head> 
-        <meta charset="UTF-8"></mata>
+        <meta charset="UTF-8"></meta>
         <!-- link to style -->
         <link rel="stylesheet" href="style.css"/>
         <!-- link to goole font -->
         <link rel="stylesheet" href="https:/fonts.googleapis.com/css?family=Poppins:wght @400;500&display=swap"/> 
+        
+        
         <title>Budget App</title> 
     </head>
     <body>
+        <!--link with firebase -->
+        <script type="module" src="./JS/firebase.js"></script>
+        
         <div class="wrapper">
             <div class="container">
                 <div class="sub-container">
@@ -30,7 +35,7 @@
                             <option value="Groceries">Groceries</option>
                             <option value="Bills">Bills</option>
                             <option value="Gas">Gas</option>
-                            <option value="Entertaiment">Entertaiment</option>
+                            <option value="Entertaiment">Entertainment</option>
                             <option value="Dining">Dining</option>
                         <!--Cost input-->
                         <input type="number" id="expenses-amount" placeholder="Enter Cost of Product">
@@ -45,7 +50,7 @@
                     </div>
                     <div>
                         <p>Expenses</p>
-                        <span id="expend-vlaue">0</span>
+                        <span type="number" id="expend-vlaue">0</span>
                     </div><div>
                         <p>Blance</p>
                         <span id="balnce-amount">0</span>
@@ -61,7 +66,7 @@
         </div>
 
         </div> 
-    
-        <script src="script.js"></script>
+        <!--link with my script-->
+        <script src="./JS/script.js"></script>
     </body>
 </html>
